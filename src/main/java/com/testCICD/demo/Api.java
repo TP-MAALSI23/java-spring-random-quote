@@ -1,4 +1,4 @@
-package com.testcicd.demo;
+package com.testCICD.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
