@@ -14,7 +14,6 @@ import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 import java.util.List;
 import java.util.Random;
-import java.util.stream.Collectors;
 
 @SpringBootApplication
 public class Api {
@@ -35,8 +34,7 @@ class CitationController {
             Resource resource = new ClassPathResource(FILE_PATH);
             InputStream is = resource.getInputStream();
             List<String> lines = new BufferedReader(new InputStreamReader(is, StandardCharsets.UTF_8))
-                    .lines()
-                    .collect(Collectors.toList());
+                    .lines().toList();
 
             if (lines.isEmpty()) {
                 return "No citations found!";
